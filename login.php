@@ -13,8 +13,12 @@
       <label for="username">Username:</label>
       <input type="text" name="username" required>
 
+
       <label for="password">Password:</label>
-      <input type="password" name="password" required>
+      <div style="position:relative;">
+        <input type="password" name="password" id="password" required style="padding-right:40px;">
+        <button type="button" id="togglePassword" style="position:absolute; right:5px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; color:#0078d4;">Show</button>
+      </div>
 
       <label>
         <input type="checkbox" name="remember"> Remember Me
@@ -23,10 +27,12 @@
       <button type="submit">Login</button>
     </form>
     <?php if (isset($_SESSION['error'])): ?>
-      <p style="color:red"><?= $_SESSION['error'] ?></p>
+      <p class="login-error" style="color:red; margin-top:10px; animation: shake 0.3s;"> <?= $_SESSION['error'] ?> </p>
       <?php unset($_SESSION['error']); ?>
     <?php endif; ?>
     <p><a href="reset_request.php">Forgot Password?</a></p>
   </main>
+</main>
+<script src="js/login.js"></script>
 </body>
 </html>
