@@ -100,8 +100,8 @@
 }
 .tag {
     display: inline-block;
-    background: #d1f7c4;
-    color: #1a4e7a;
+    background: #91eced;
+    color: #000407;
     font-size: 0.95em;
     font-weight: 500;
     border-radius: 5px;
@@ -431,4 +431,13 @@ footer {
   transition: box-shadow 0.3s, border-color 0.3s;
   z-index: 2;
 }
+.game-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
 
+.tag:hover {
+    background-color: #666;
+}
