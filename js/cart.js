@@ -3,8 +3,8 @@ let cart = [];
 
 function addToCart(title, price) {
   cart.push({ title, price });
-  updateCartDisplay();
   saveCartToLocalStorage();
+  updateCartDisplay();
 }
 
 function updateCartDisplay() {
@@ -13,14 +13,46 @@ function updateCartDisplay() {
   cartList.innerHTML = '';
   let total = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     const li = document.createElement('li');
-    li.textContent = `${item.title} - $${item.price.toFixed(2)}`;
+    li.style.display = 'flex';
+    li.style.justifyContent = 'space-between';
+    li.style.alignItems = 'center';
+    li.style.padding = '4px 0';
+
+    // Game info on the left
+    const infoSpan = document.createElement('span');
+    infoSpan.textContent = `${item.title} - $${item.price.toFixed(2)}`;
+    infoSpan.style.flex = '1';
+    infoSpan.style.textAlign = 'left';
+
+    // Remove button on the right
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.style.background = '#e74c3c';
+    removeBtn.style.color = '#fff';
+    removeBtn.style.border = 'none';
+    removeBtn.style.borderRadius = '4px';
+    removeBtn.style.padding = '2px 8px';
+    removeBtn.style.cursor = 'pointer';
+    removeBtn.onclick = function(e) {
+      e.stopPropagation(); // Prevent cart dropdown from closing
+      removeFromCart(index);
+    };
+
+    li.appendChild(infoSpan);
+    li.appendChild(removeBtn);
     cartList.appendChild(li);
     total += item.price;
   });
 
   totalDisplay.textContent = total.toFixed(2);
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  saveCartToLocalStorage();
+  updateCartDisplay();
 }
 
 function saveCartToLocalStorage() {
