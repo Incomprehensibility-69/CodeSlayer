@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Codeslayer Game Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodeSlayer</title>
+    <link rel="icon" type="image/jpg" href="img/giga.jpg">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="header-container">
@@ -51,18 +53,23 @@
         <button class="slider-btn next" onclick="nextFeatured()">&#10095;</button>
     </div>
 </section>
-  <header>
-    <h1>CodeSlayer.com</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Games</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-    <form id="loginForm" action="login.php" method="POST">
-  <div id="errorBox" style="color: red; display: none;"></div>
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
+
+    <main>
+        <section class="hero">
+            <h2>Level Up Your Collection</h2>
+            <p>Browse our curated selection of physical games for all platforms.</p>
+            <button>Shop Now</button>
+         
+            <section class="categories">
+        <h3>Featured Platform</h3>
+        <div class="platforms">
+            <img src="img/PS5-removebg-preview.png" alt="PlayStation">
+            <img src="img/xbox-removebg-preview.png" alt="Xbox">
+            <img src="img/switch.png" alt="Nintendo Switch">
+            <img src="img/PC-removebg-preview.png" alt="PC">
+        </div>
+    </section>
+
         <section class="featured">
             <h3>Featured Games</h3>
             <div class="game-grid">
@@ -237,95 +244,5 @@
     <script src="js/cart.js"></script>
     <script src="js/search.js"></script>
     <script src="js/admin.js"></script>
-</body>
-</html>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <button type="button" id="togglePassword">Show</button>
-
-  <button type="submit">Login</button>
-</form>
-
-<script src="login.js"></script>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Discover Your Next Favorite Game</h2>
-    <p>Curated classics and indie gems, all in one place.</p>
-    <button>Browse Collection</button>
-  </section>
-
-  <section class="featured">
-    <h3>Featured Games</h3>
-    <div class="game-card">Game 1</div>
-    <div class="game-card">Game 2</div>
-    <div class="game-card">Game 3</div>
-  </section>
-  <input type="text" id="search" placeholder="Search games..." />
-<div class="game-card">
-  <h4>Retro Rush</h4>
-  <p>$29.99</p>
-  <button onclick="addToCart('Retro Rush', 29.99)">Add to Cart</button>
-</div>
-
-<div id="cart">
-  <h3>Your Cart</h3>
-  <ul id="cart-items"></ul>
-  <p>Total: $<span id="cart-total">0.00</span></p>
-  <a href="checkout.html">Go to Checkout</a>
-</div>
-
-<script src="index.js"></script>
-<script></script>
-
-  <footer>
-    <p>&copy; 2025 Codeslayer.com, Inc.</p>
-  </footer>
-</body>
-</html>
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password" required>
-  <button type="button" id="togglePassword">Show</button>
-
-  <button type="submit">Login</button>
-</form>
-
-<script src="login.js"></script>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Discover Your Next Favorite Game</h2>
-    <p>Curated classics and indie gems, all in one place.</p>
-    <button>Browse Collection</button>
-  </section>
-
-  <section class="featured">
-    <h3>Featured Games</h3>
-    <div class="game-card">Game 1</div>
-    <div class="game-card">Game 2</div>
-    <div class="game-card">Game 3</div>
-  </section>
-  <input type="text" id="search" placeholder="Search games..." />
-<div class="game-card">
-  <h4>Retro Rush</h4>
-  <p>$29.99</p>
-  <button onclick="addToCart('Retro Rush', 29.99)">Add to Cart</button>
-</div>
-
-<div id="cart">
-  <h3>Your Cart</h3>
-  <ul id="cart-items"></ul>
-  <p>Total: $<span id="cart-total">0.00</span></p>
-  <a href="checkout.html">Go to Checkout</a>
-</div>
-
-<script src="index.js"></script>
-<script></script>
-
-  <footer>
-    <p>&copy; 2025 Codeslayer.com, Inc.</p>
-  </footer>
 </body>
 </html>
