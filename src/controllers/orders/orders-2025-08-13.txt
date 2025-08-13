@@ -1,0 +1,8 @@
+Order Date: 2025-08-13 09:40:12
+Customer: Nathanael Chow <nathanelczh1028@gmail.com>
+Items:
+ - FINAL FANTASY XVI @ $49.99
+ - Mario Kart World @ $79.99
+Total: $129.98
+----------------------------------------
+
